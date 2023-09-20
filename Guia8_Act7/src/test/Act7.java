@@ -35,7 +35,7 @@ también calcularemos un porcentaje de cuantos son mayores de edad y cuantos men
 public class Act7 {
 	public static final double TOTAL=4;
 	public static void main(String[]args) {
-		double flacos=0, fit=0, gordos=0, menores=0, mayores=0;
+	/*	double flacos=0, fit=0, gordos=0, menores=0, mayores=0;
 		Persona [] arrPersonas=new Persona [(int)TOTAL];
 		ServicePersona serv=new ServicePersona();
 		for (int i=0; i<TOTAL;i++) {
@@ -62,5 +62,15 @@ public class Act7 {
 			}
 		}
 		System.out.println("Debajo del peso ideal: "+(flacos/TOTAL)*100+"%"+"\nDentro del peso ideal: "+(fit/TOTAL)*100+"%"+"\nEncima del peso ideal: "+(gordos/TOTAL)*100+"%"+"\nMayores: "+(mayores/TOTAL)*100+"%"+"\nMenores: "+(menores/TOTAL)*100+"%");
+	*/
+	Persona wachin=null;
+	ServicePersona serv=new ServicePersona();
+	try {
+		serv.esMayorDeEdad(wachin);
+	}catch (NullPointerException e) {
+		System.out.println(e);
+		System.out.println(e.getMessage());
+		System.out.println("La persona creada tiene un valor nulo");
+	}
 	}
 }

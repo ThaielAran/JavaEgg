@@ -40,7 +40,10 @@ public class ServicePersona {
 			return 1;
 	}
 	
-	public boolean esMayorDeEdad(Persona p) {
+	public boolean esMayorDeEdad(Persona p) throws NullPointerException {
+		if(p==null) {
+			throw new NullPointerException("La persona es nula");
+		}
 		return(p.getEdad()>18);
 	}
 }
